@@ -12,6 +12,6 @@ class Artist(models.Model):
 class Issue(models.Model):
     number = models.IntegerField()
     comic_id = models.ForeignKey(Comic, on_delete=models.CASCADE, related_name="comic_issue")
-    writer = models.ManyToManyField(Writer)
-    artist = models.ManyToManyField(Artist)
+    writer = models.ManyToManyField(Writer, related_name=writer_issue)
+    artist = models.ManyToManyField(Artist, related_name=artist_issue)
    

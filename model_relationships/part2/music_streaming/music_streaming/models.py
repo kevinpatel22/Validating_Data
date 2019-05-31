@@ -9,4 +9,4 @@ class Tracks(models.Model):
 
 class Listeners(models.Model):
     name = models.CharField(max_length=255)
-    artist = models.ManyToManyField(Artists)
+    artist = models.ManyToManyField(Artists, related_name=artist_listener)

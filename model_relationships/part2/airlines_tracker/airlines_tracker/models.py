@@ -12,6 +12,6 @@ class Passengers(models.Model):
 class FlightSchedule(models.Model):
     time = models.IntegerField()
     airline = models.ForeignKey(Airlines, on_delete=models.CASCADE, related_name="airline_schedule")
-    crewmembers = models.ManyToManyField(CrewMembers)
-    passengers = models.ManyToManyField(Passengers)
+    crewmembers = models.ManyToManyField(CrewMembers, related_name=crewmem)
+    passengers = models.ManyToManyField(Passengers, related_name=pass)
    
