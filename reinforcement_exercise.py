@@ -5,6 +5,7 @@ seats = [
   ["Smokey","Toast","Pacha","Mau"]
 ]
 
+
 def classroom(spot=1):
   for rindx, row in enumerate(seats, spot): 
     for sindx, seat in enumerate(row, spot):
